@@ -14,5 +14,5 @@ app.use(cors({origin:'http://localhost:3000'}))
 app.use(express.json());
 app.use(routes);
 
-app.listen(2000);
+app.listen(process.env.PORT || 2000);
 
