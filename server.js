@@ -11,7 +11,6 @@ mongoose.connect('mongodb+srv://projecttela:123qwe.@projecttela-jjxo5.mongodb.ne
 useNewUrlParser: true, useUnifiedTopology: true,})
 
 
-app.use(cors())
 app.use(cors({origin:'http://localhost:3000'}));
 app.use(express.json());
 app.use(routes);
