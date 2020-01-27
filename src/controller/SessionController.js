@@ -3,16 +3,22 @@ const User = require('../model/User');
 
 module.exports = {
 
-   async  store (req, res){
-       const { email } = req.body;
-    const user = await User.findOne({ email })
+    async get (req, res) {
+        const devs = await User.find();
+        return res.json(devs);
+    },
 
+   async store (req, res){
+       const { username, email, senha } = req.body;
+       
+    var user = await User.findOne({ username, email, senha });
+        
     if(!user){
 
-    user = await User.create({ email} );
-    
-         }
+    user = await User.create({ username, email, senha} );
 
+         }
+            
         return res.json(user);
     }
 

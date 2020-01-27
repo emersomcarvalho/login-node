@@ -10,7 +10,11 @@ const app = express();
 mongoose.connect('mongodb+srv://projecttela:123qwe.@projecttela-jjxo5.mongodb.net/nodedb?retryWrites=true&w=majority',{
 useNewUrlParser: true, useUnifiedTopology: true,})
 
+<<<<<<< HEAD
 app.use(cors())
+=======
+app.use(cors({origin: 'http://localhost:3000'}))
+>>>>>>> Ajuste local
 app.use(express.json());
 app.use(routes);
 
