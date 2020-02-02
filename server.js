@@ -5,7 +5,7 @@ const cors = require('cors');
 const app = express();
 
 
-app.use(cors({ origin:'https://teladelogin.herokuapp.com' }));
+app.use(cors());
 app.use(express.json());
 
 require('./src/controllers/authController')(app);
